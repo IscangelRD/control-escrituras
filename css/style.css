@@ -3145,3 +3145,238 @@ button {
         cursor: not-allowed;
     }
 }
+/* =====================================
+   ARCHIVO DE EXPEDIENTES ELIMINADOS
+===================================== */
+
+.archivo-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(75, 45, 13, 0.22);
+}
+
+.archivo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #633811, #2b1706);
+    color: #fff1d0;
+}
+
+.archivo-header h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 27px;
+    color: #3a210b;
+}
+
+.archivo-header p {
+    margin: 6px 0 0;
+    color: #63401e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.archivo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+    gap: 18px;
+}
+
+.archivo-card {
+    min-width: 0;
+    padding: 20px;
+    border-radius: 20px;
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(255,255,255,0.35),
+            transparent 30%),
+        linear-gradient(
+            135deg,
+            #fff1c9,
+            #e8cb91,
+            #c2944b
+        );
+
+    border: 3px double rgba(75, 45, 13, 0.35);
+
+    box-shadow:
+        0 10px 24px rgba(15, 23, 42, 0.15),
+        inset 0 0 22px rgba(75, 45, 13, 0.10);
+}
+
+.archivo-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.archivo-card-header h3 {
+    margin: 0;
+    color: #3a210b;
+    font-family: Georgia, serif;
+    font-size: 23px;
+}
+
+.archivo-status {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.archivo-cliente {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #241205;
+    overflow-wrap: anywhere;
+}
+
+.archivo-tipo {
+    color: #63401e;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 16px;
+}
+
+.archivo-datos {
+    display: grid;
+    gap: 10px;
+}
+
+.archivo-dato {
+    background: rgba(255, 247, 230, 0.55);
+    border-radius: 12px;
+    padding: 12px;
+    overflow-wrap: anywhere;
+}
+
+.archivo-dato span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #79552d;
+}
+
+.archivo-dato strong {
+    color: #3a210b;
+    font-size: 14px;
+}
+
+/* Botón de restaurar */
+
+.btn-restaurar {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: linear-gradient(135deg, #15803d, #166534);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    box-shadow: 0 8px 18px rgba(22, 101, 52, 0.25);
+}
+
+.btn-restaurar:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.archivo-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+}
+
+.archivo-vacio {
+    padding: 35px 18px;
+    text-align: center;
+    color: #63401e;
+    background: rgba(255, 247, 230, 0.60);
+    border: 1px dashed rgba(75, 45, 13, 0.30);
+    border-radius: 18px;
+}
+
+/* =====================================
+   DISEÑO MÓVIL
+===================================== */
+
+@media (max-width: 900px) {
+
+    .archivo-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .archivo-header {
+        padding: 12px 0;
+        gap: 12px;
+    }
+
+    .archivo-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+    }
+
+    .archivo-header h2 {
+        font-size: 20px;
+    }
+
+    .archivo-header p {
+        font-size: 12px;
+    }
+
+    .archivo-card {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .archivo-card-header h3 {
+        font-size: 20px;
+    }
+
+    .archivo-cliente {
+        font-size: 18px;
+    }
+
+    .btn-restaurar {
+        min-height: 48px;
+        font-size: 14px;
+    }
+
+    .archivo-footer a {
+        width: 100%;
+        text-align: center;
+    }
+
+    #buscarEliminado {
+        font-size: 16px !important;
+        box-sizing: border-box;
+    }
+}

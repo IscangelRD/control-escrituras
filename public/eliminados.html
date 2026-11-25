@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Archivo de eliminados | Control de Escrituras</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+
+    <link rel="stylesheet" href="../css/style.css?v=30">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menú">
+            ☰
+        </button>
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-logo">CE</div>
+
+                <div>
+                    <h2>Control</h2>
+                    <span>Escrituras</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard.html">Panel</a>
+
+                <a href="expedientes.html">Expedientes</a>
+
+                <a href="eliminados.html" class="active">
+                    Archivo de eliminados
+                </a>
+
+                <a href="expediente-nuevo.html">
+                    Nuevo expediente
+                </a>
+
+                <a href="reportes.html">Reportes</a>
+
+
+
+                <a href="#" onclick="cerrarSesion()">
+                    Cerrar sesión
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+                    <h1>Archivo de eliminados</h1>
+                    <p>Consulta y recuperación de expedientes</p>
+                </div>
+
+                <div class="user-box">
+                    <span id="userName">Usuario</span>
+                    <small id="userRole">Rol</small>
+                </div>
+
+            </header>
+
+            <section class="expedientes-panel">
+
+                <div class="archivo-header">
+
+                    <div class="archivo-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
+                            <rect x="3" y="3" width="18" height="4" rx="1" />
+                            <path d="M5 7v13h14V7" />
+                            <path d="M10 11h4" />
+
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2>Archivo histórico</h2>
+
+                        <p>
+                            Los expedientes eliminados pueden ser recuperados
+                            sin perder su información original.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="quick-search-app">
+
+                    <div class="quick-search-box">
+
+                        <span class="quick-search-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="m21 21-4.35-4.35" />
+
+                            </svg>
+                        </span>
+
+                        <input type="search" id="buscarEliminado" placeholder="Buscar expediente eliminado..."
+                            aria-label="Buscar expediente eliminado" autocomplete="off">
+
+                    </div>
+
+                </div>
+
+                <div class="expedientes-summary">
+
+                    <span id="eliminadosMessage" aria-live="polite">
+                        Cargando expedientes...
+                    </span>
+
+                </div>
+
+                <!-- Paginación superior para celular -->
+
+                <div class="pagination-mobile-top" id="paginationMobileTop">
+                </div>
+
+                <!-- Listado de expedientes eliminados -->
+
+                <div class="archivo-grid" id="eliminadosContainer">
+                </div>
+
+                <!-- Paginación inferior para computadora -->
+
+                <div class="pagination-box pagination-desktop-bottom" id="paginationBox">
+                </div>
+
+                <div class="archivo-footer">
+
+                    <a href="expedientes.html" class="btn-secondary">
+                        ← Regresar a expedientes
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/eliminados.js?v=1"></script>
+    <script src="../js/mobile_menu.js"></script>
+
+</body>
+
+</html>

@@ -39,8 +39,10 @@
                 <a href="dashboard.html" class="active">Panel</a>
                 <a href="expedientes.html">Expedientes</a>
                 <a href="expediente-nuevo.html">Nuevo expediente</a>
+                <a href="eliminados.html">Archivo de eliminados </a>
                 <a href="reportes.html">Reportes</a>
                 <a href="usuarios.html">Usuarios</a>
+
                 <a href="#" onclick="cerrarSesion()">Cerrar sesión</a>
             </nav>
         </aside>
@@ -125,18 +127,18 @@
     <script src="../js/dashboard.js"></script>
     <script src="../js/mobile_menu.js"></script>
     <script>
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker.register("service-worker.js")
-                .then(() => {
-                    console.log("App móvil registrada correctamente");
-                })
-                .catch(error => {
-                    console.error("Error al registrar la app móvil:", error);
-                });
-        });
-    }
-</script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js")
+                    .then(() => {
+                        console.log("App móvil registrada correctamente");
+                    })
+                    .catch(error => {
+                        console.error("Error al registrar la app móvil:", error);
+                    });
+            });
+        }
+    </script>
 
 </body>
 
